@@ -4,6 +4,7 @@ vim.pack.add({
   'https://github.com/ibhagwan/fzf-lua',
   'https://github.com/lewis6991/gitsigns.nvim',
   'https://github.com/neovim/nvim-lspconfig',
+  'https://github.com/folke/which-key.nvim',
   'https://github.com/rebelot/kanagawa.nvim',
   'https://github.com/Mofiqul/adwaita.nvim',
 })
@@ -91,6 +92,13 @@ vim.schedule(function()
       typescriptreact = prettier,
       yaml = prettier,
       zig = { 'zigfmt' },
+    },
+  })
+
+  require('which-key').setup({
+    preset = 'helix',
+    icons = {
+      mappings = false,
     },
   })
 
